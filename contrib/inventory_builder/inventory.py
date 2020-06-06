@@ -206,12 +206,12 @@ class KubesprayInventory(object):
                 if self.exists_hostname(all_hosts, host):
                     self.debug("Skipping existing host {0}.".format(host))
                     continue
-                elif self.exists_ip(all_hosts, ip):
-                    self.debug("Skipping existing host {0}.".format(ip))
+                elif self.exists_ip(all_hosts, host):
+                    self.debug("Skipping existing host {0}.".format(host))
                     continue
-                all_hosts[hostname] = {'ansible_host': access_ip,
-                                       'ip': ip,
-                                       'access_ip': access_ip}
+                all_hosts[host] = {'ansible_host': host,
+                                       'ip': host,
+                                       'access_ip': host}
         return all_hosts
 
     def range2ips(self, hosts):
