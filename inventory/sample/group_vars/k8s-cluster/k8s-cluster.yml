@@ -106,7 +106,7 @@ kube_apiserver_insecure_port: 0  # (disabled)
 kube_proxy_mode: ipvs
 
 # configure arp_ignore and arp_announce to avoid answering ARP queries from kube-ipvs0 interface
-# must be set to true for MetalLB to work
+# must be set to true for MetalLB to work -> not used anymore
 kube_proxy_strict_arp: false
 
 # A string slice of values which specify the addresses to use for NodePorts.
@@ -230,7 +230,7 @@ podsecuritypolicy_enabled: false
 # podsecuritypolicy_privileged_spec: {}
 
 # Make a copy of kubeconfig on the host that runs Ansible in {{ inventory_dir }}/artifacts
-# kubeconfig_localhost: false
+kubeconfig_localhost: true
 # Download kubectl onto the host that runs Ansible in {{ bin_dir }}
 # kubectl_localhost: false
 

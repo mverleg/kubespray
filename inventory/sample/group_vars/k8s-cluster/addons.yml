@@ -1,19 +1,19 @@
 ---
 # Kubernetes dashboard
 # RBAC required. see docs/getting-started.md for access details.
-# dashboard_enabled: true
+dashboard_enabled: true
 
 # Helm deployment
-helm_enabled: false
+helm_enabled: true
 
 # Registry deployment
-registry_enabled: false
-# registry_namespace: kube-system
-# registry_storage_class: ""
-# registry_disk_size: "10Gi"
+registry_enabled: true
+registry_namespace: kube-system
+#registry_storage_class: ""
+registry_disk_size: "15Gi"
 
 # Metrics Server deployment
-metrics_server_enabled: false
+metrics_server_enabled: true
 # metrics_server_kubelet_insecure_tls: true
 # metrics_server_metric_resolution: 60s
 # metrics_server_kubelet_preferred_address_types: "InternalIP"
@@ -84,8 +84,8 @@ rbd_provisioner_enabled: false
 # rbd_provisioner_reclaim_policy: Delete
 
 # Nginx ingress controller deployment
-ingress_nginx_enabled: false
-# ingress_nginx_host_network: false
+ingress_nginx_enabled: true
+ingress_nginx_host_network: true
 ingress_publish_status_address: ""
 # ingress_nginx_nodeselector:
 #   kubernetes.io/os: "linux"
@@ -121,13 +121,13 @@ ingress_alb_enabled: false
 # alb_ingress_aws_debug: "false"
 
 # Cert manager deployment
-cert_manager_enabled: false
+cert_manager_enabled: true
 # cert_manager_namespace: "cert-manager"
 
 # MetalLB deployment
-metallb_enabled: false
-# metallb_ip_range:
-#   - "10.5.0.50-10.5.0.99"
+#metallb_enabled: true
+#metallb_ip_range:
+#  - "144.91.95.197-144.91.95.197"
 # metallb_version: v0.9.3
 # metallb_protocol: "layer2"
 # metallb_port: "7472"
